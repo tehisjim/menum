@@ -35,7 +35,7 @@ def handle_message(event):
     # 關鍵字對應圖片
     keyword_images = {
         "#丹丹": "https://cpok.tw/wp-content/uploads/2025/02/2025.jpeg",
-        "#狗狗": "https://thumb.photo-ac.com/f1/f16b270bc3660676926c5e41f7cdc383_t.jpeg",
+        "#五十嵐": "https://blog-media-cdn.roo.cash/blog/wp-content/uploads/2024/07/26011730/447387930_979502500629595_5781678396354667473_n-768x1046.jpg",
         "測試": "https://i.imgur.com/xHgkP4r.png"
     }
 
@@ -46,7 +46,7 @@ def handle_message(event):
             preview_image_url=img_url
         )
     else:
-        reply = TextSendMessage(text="這個關鍵字沒有圖片 😅")
+        pass
 
     line_bot_api.reply_message(event.reply_token, reply)
 
