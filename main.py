@@ -7,8 +7,8 @@ import os
 app = Flask(__name__)
 
 # 從環境變數讀取
-CHANNEL_ACCESS_TOKEN = "UMuvfMQIByqYrGLo1Qd0P+JNXwPRDwoCHuEjCpPZIBwZ54EawekgENrUzITg8lM+XGwcw+KqdxswTVt2o6gWmzE59zPl6z+BZKdBX7DyCT7p1uxmRt6TCYH77n/DInyXaK3Se1NeosnTuE0o+PKlugdB04t89/1O/w1cDnyilFU="
-CHANNEL_SECRET = "e5b8caec53a390ee74ccbefa801c7fc6"
+CHANNEL_ACCESS_TOKEN = os.getenv("CHANNEL_ACCESS_TOKEN")
+CHANNEL_SECRET = os.getenv("CHANNEL_SECRET")
 
 line_bot_api = LineBotApi(CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(CHANNEL_SECRET)
@@ -18,6 +18,8 @@ handler = WebhookHandler(CHANNEL_SECRET)
 def callback():
     signature = request.headers['X-Line-Signature']
     body = request.get_data(as_text=True)
+
+    print("Request body:", body)  # debug 用
 
     try:
         handler.handle(body, signature)
@@ -50,4 +52,5 @@ def handle_message(event):
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
