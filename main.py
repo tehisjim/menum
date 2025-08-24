@@ -36,15 +36,31 @@ def handle_message(event):
     keyword_images = {
         "#丹丹": "https://cpok.tw/wp-content/uploads/2025/02/2025.jpeg",
         "#五十嵐": "https://blog-media-cdn.roo.cash/blog/wp-content/uploads/2024/07/26011730/447387930_979502500629595_5781678396354667473_n-768x1046.jpg",
-        "#時光": "https://i.imgur.com/4BV40Mr.png"
+        "#時光": "https://i.imgur.com/4BV40Mr.png",
+        "#公仔麵": "https://i.imgur.com/qSwXGeF.png",
+        "#晨間": "https://i.imgur.com/Yiz5pZg.png",
+        "#清心": "https://i.imgur.com/EwP4WVP.png",
+        "#美之城": ["https://i.imgur.com/eht90P2.png", "https://i.imgur.com/IERCqqd.png"],
+        "#一流": "https://i.imgur.com/GTH3tnj.png",
+        "#克里姆": "https://i.imgur.com/hU31toV.png",
+        "#大眾羊肉": "https://i.imgur.com/e69rDum.png",
+    }
+
+    # 關鍵字對應文字
+    keyword_replies = {
+        "#菜單": "🍔 目前支援的關鍵字有：\n#丹丹\n#五十嵐\n#公仔麵\n#晨間\n#清心\n#美之城\n#一流\n#克里姆\n#大眾羊肉"
     }
 
     if user_text in keyword_images:
         img_url = keyword_images[user_text]
-        reply = ImageSendMessage(
-            original_content_url=img_url,
-            preview_image_url=img_url
-        )
+        if isinstance(img_url, list):  # 多張圖片
+            reply = [ImageSendMessage(
+                original_content_url=url, preview_image_url=url) for url in img_url]
+        else:
+            reply = ImageSendMessage(
+                original_content_url=img_url, preview_image_url=img_url)
+    elif user_text in keyword_replies:
+        reply = TextSendMessage(text=keyword_replies[user_text])
     else:
         pass
 
