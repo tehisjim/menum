@@ -34,7 +34,7 @@ def handle_message(event):
 
     # 關鍵字對應圖片
     keyword_images = {
-        "#丹丹": "https://cpok.tw/wp-content/uploads/2025/02/2025.jpeg",
+        "#丹丹": "https://i.imgur.com/CaoOBuV.png",
         "#五十嵐": "https://blog-media-cdn.roo.cash/blog/wp-content/uploads/2024/07/26011730/447387930_979502500629595_5781678396354667473_n-768x1046.jpg",
         "#時光": "https://i.imgur.com/4BV40Mr.png",
         "#公仔麵": "https://i.imgur.com/qSwXGeF.png",
