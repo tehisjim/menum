@@ -76,6 +76,9 @@ def handle_message(event):
         "#黃悶雞": "https://i.imgur.com/zb3CWa9.jpeg",
         "#福烏龍麵": "https://i.imgur.com/uaZYn0C.jpeg",
         "#蘭州": "https://i.imgur.com/1I4DvJD.jpeg",
+        "#梅家村": "https://i.imgur.com/zAVZDh4.png",
+        "#一沐日": "https://i.imgur.com/hLm8NMY.png",
+        "#麵場小船": "https://i.imgur.com/KcKKQ4H.png",
     }
 
     # 關鍵字對應文字（自動產生菜單）
