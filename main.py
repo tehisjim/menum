@@ -58,7 +58,7 @@ def handle_message(event):
         "#食扒穗": "https://i.imgur.com/s5GLQ4a.png",
         "#八方": "https://i.imgur.com/DXByKl5.png",
         "#21世紀": "https://i.imgur.com/NN1YHjJ.png",
-        "#麻古": "https://i.imgur.com/QMD5RXQ.png",
+        "#麻古": "https://i.imgur.com/L2RXXOT.png",
         "#黑白馬飯捲": "https://i.imgur.com/k0089Fx.png",
         "#水巷茶弄": "https://i.imgur.com/jAHJPxh.png",
         "#可不可": "https://i.imgur.com/8Si5bxB.png",
@@ -79,6 +79,7 @@ def handle_message(event):
         "#梅家村": "https://i.imgur.com/zAVZDh4.png",
         "#一沐日": "https://i.imgur.com/hLm8NMY.png",
         "#麵場小船": "https://i.imgur.com/KcKKQ4H.png",
+        "#張家烤肉": "https://i.imgur.com/CEKKUlH.jpeg",
     }
 
     # 關鍵字對應文字（自動產生菜單）
