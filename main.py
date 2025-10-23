@@ -80,6 +80,7 @@ def handle_message(event):
         "#一沐日": "https://i.imgur.com/hLm8NMY.png",
         "#麵場小船": "https://i.imgur.com/KcKKQ4H.png",
         "#張家烤肉": "https://i.imgur.com/CEKKUlH.jpeg",
+        "#石一籠": "https://i.imgur.com/uhbwL8X.jpeg",
     }
 
     # 關鍵字對應文字（自動產生菜單）
